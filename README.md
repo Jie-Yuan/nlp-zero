@@ -11,14 +11,9 @@ for i, j in f.templates.items():
     
 p = Parser(trie, jieba.lcut) # 建立一个解析器
 
-p.parse('< Template')
 p.parse('我是周杰伦')
 p.parse(u'苏宁是什么呢') 
 
-+---> < Template
-|     +---> <
-|     +--->  
-|     +---> Template
 +---> 我(是周杰伦)
 |     +---> 我
 |     +---> 是(周杰伦)
